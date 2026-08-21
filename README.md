@@ -60,15 +60,15 @@ A final mux picks what actually gets written back to the register file — the A
 
 I used a custom toolflow to run the design through simulation and check the results against expected output. Every required instruction was tested, including a full pass across all arithmetic/logic, memory, and branch/jump instructions:
 
-![Test Summary](test_summary.png)
+![Test Summary](image2.png)
 
 Below is a waveform capture showing the fetch/decode/execute signals updating correctly across a running test program (PC updates, branch/jump signals, ALU inputs/outputs, register writes):
 
-![Waveform - Fetch and Decode Signals](waveform_fetch_decode.png)
+![Waveform - Fetch and Decode Signals](iamge1.png)
 
 I also captured a waveform specifically for a memory store operation to confirm write data, address, and write-enable timing were correct:
 
-![Waveform - Memory Store](waveform_memory_store.png)
+![Waveform - Memory Store](iamge1.png)
 
 Tested with programs that exercise every arithmetic/logic instruction, a control-flow test with nested function calls, and a merge sort implementation to make sure everything works together correctly, not just in isolation.
 
